@@ -1,0 +1,876 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+b,strong {
+    font-weight: bolder;
+}
+code,kbd,samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+small {
+    font-size: 80%;
+}
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+img {
+    border-style: none;
+}
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button,input {
+    overflow: visible;
+}
+button,select {
+    text-transform: none;
+}
+button,[type="button"],[type="reset"],[type="submit"] {
+    -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+progress {
+    vertical-align: baseline;
+}
+textarea {
+    overflow: auto;
+}
+[type="checkbox"],[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+details {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Circular Std Black';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Circular Std Book'), local('CircularStd-Book'),
+    url('../assets/fonts/CircularStd-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Circular Std Medium'), local('CircularStd-Medium'),
+    url('../assets/fonts/CircularStd-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Circular Std Book'), local('CircularStd-Book'),
+    url('../assets/fonts/CircularStd-Book.woff2') format('woff2');
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    font-family: 'Circular Std Book';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: #999999;
+    margin: 0 auto 32px;
+}
+.hero{
+    height: 994px;
+    width: 1440px;
+    background: #f3f7fd;
+    position: relative;
+}
+
+.topbar{
+    max-width: 1440px;
+    max-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 32px;
+}
+
+.logo{
+    margin-top: 22px;
+    margin-left: 120px;
+}
+
+.navigation{
+    display: flex;
+    padding-top: 31px;
+    padding-left: 537px;
+    /*justify-content: space-between;*/
+}
+
+.nav_link_featured{
+    font-family: "Circular Std";
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 17px;
+    color:#333333;
+    margin: 0 16px;
+}
+
+.nav_link_services{
+    margin: 0 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.nav_link_about{
+    margin: 0 16px;
+    text-decoration: none;
+    line-height: 16px;
+    color: #999999;
+}
+
+.nav_link_doctors{
+    margin: 0 16px;
+    margin-right: 63px;
+    text-decoration: none;
+    line-height: 16px;
+    color: #999999;
+}
+.featured_rectangle{
+    width: 16px;
+    height: 4px;
+    left: 800px;
+    top: 54px;
+    background: #0E63DC;
+    border-radius: 1.25px;
+    align-self: center;
+}
+
+.login_link{
+    font-family: "Circular Std";
+    margin-right: 24px;
+    text-decoration: none;
+    color: #0E63DC;
+}
+
+.register_link{
+    font-family: "Circular Std";
+    line-height: 17px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: 0;
+    color: white;
+    background-color: #0E63DC;
+}
+
+.register_link:hover{
+    background-color: darkblue;
+}
+
+.hero_section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    height: 820px;
+}
+
+.tulisan_hero{
+    max-width: 660px;
+    max-height: 600px;
+    padding-left: 120px;
+    padding-top: 134px;
+    margin: 0;
+}
+
+.title_hero{
+    font-family: "Circular Std Black";
+    font-size: 68px;
+    line-height: 88px;
+    letter-spacing: -0.02em;
+    color: #2E2E2E;
+    margin-bottom: 24px;
+}
+
+.subtitle_hero{
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 64px;
+}
+
+.make_appoint{
+    font-family: "Circular Std Black";
+    font-size: 16px;
+    line-height: 19px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    color: white;
+    border: 0;
+    background-color: #0E63DC;
+}
+
+.make_appoint:hover{
+    background-color: darkblue;
+}
+
+.hero_image{
+    position: absolute;
+    left: 694px;
+    top: 86px;
+}
+
+.profile_block{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background: #FFFFFF;
+    border-radius: 24px 0px 0px 24px;
+    max-width: 774px;
+    max-height: 134px;
+    margin-left: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+.profile_info_block_icon{
+    position: absolute;
+    left: -36px;
+    top: 30px;
+}
+
+.profile_info{
+    display: flex;
+    margin-top: 13px;
+}
+
+.profile_info_name_block{
+    margin-left: 70px;
+
+    /*display: flex;*/
+}
+
+.profile_info_name_textblock{
+    display: flex;
+    margin-right: 70px;
+}
+
+.profile_info_textbox_title{
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #2E2E2E;
+    margin-left: 12px;
+}
+
+.profile_info_textbox_subtitle{
+    font-size: 18px;
+    padding-left: 32px;
+    margin: 0 0 25px;
+}
+
+.profile_info_experience_block{
+    display: flex;
+    flex-direction: column;
+    margin-right: 65px;
+}
+
+.profile_info_experience_textblock{
+    display: flex;
+}
+
+.profile_info_place_of_service_block{
+    display: flex;
+    flex-direction: column;
+    margin-right: 65px;
+}
+
+.profile_info_place_of_service_textblock{
+    display: flex;
+}
+
+/*hero section end*/
+
+/*services section start*/
+
+.services{
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.services_main_title{
+    max-width: 436px;
+    max-height: 102px;
+    margin-top: 162px;
+    align-self: center;
+}
+
+.services_title{
+    /*align-self: center;*/
+    font-family: "Circular Std";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #2E2E2E;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.services_subtitle{
+    align-self: center;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    margin: 0 0 94px;
+}
+
+.services_list{
+    display: flex;
+    flex-direction: row;
+    margin-top: 94px;
+    margin-bottom: 229px;
+}
+
+.covid_test{
+    max-width: 282px;
+    max-height: 389px;
+    margin-left: 154px;
+    margin-right: 83px;
+}
+
+.services_list_title{
+    font-family: "Circular Std";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #2E2E2E;
+    letter-spacing: -0.02em;
+    margin-left: 25px;
+}
+
+.services_list_subtitle{
+    max-width: 224px;
+    max-height: 105px;
+    margin-left: 25px;
+}
+
+.online_consultation{
+    max-width: 282px;
+    max-height: 389px;
+    margin-right: 83px;
+}
+
+.buy_medicine{
+    max-width: 282px;
+    max-height: 389px;
+    margin-right: 83px;
+}
+
+.check_up_booking{
+    max-width: 282px;
+    max-height: 389px;
+    margin-right: 83px;
+}
+
+/*services section end
+
+/*covid symptoms section start*/
+
+.covid_symptoms{
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.information_column{
+    margin-left: 120px;
+    margin-top: 137px;
+    max-width: 420px;
+}
+
+.world_trend{
+    font-family: "Circular Std";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: #FF4C4D;
+}
+
+.recognize_title{
+    font-family: "Circular Std";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #2E2E2E;
+    margin: 0;
+    max-height: 120px;
+    max-width: 413px;
+}
+
+.list_of_symptoms{
+    font-family: "Circular Std";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #828282;
+    margin-top: 56px;
+    margin-bottom: 70px;
+    max-height: 400px;
+    max-width: 413px;
+}
+
+.difficulty_breathing{
+    display: flex;
+    flex-direction: row;
+}
+
+.difficulty_breathing_text{
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.cough{
+    display: flex;
+    flex-direction: row;
+}
+
+.cough_text{
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.fever_or_chills{
+    display: flex;
+    flex-direction: row;
+}
+
+.fever_or_chills_text{
+    padding-left: 24px;
+
+    padding-top: 3px;
+}
+
+.headache{
+    display: flex;
+    flex-direction: row;
+}
+
+.headache_text{
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.sore_throat{
+    display: flex;
+    flex-direction: row;
+}
+
+.sore_throat_text{
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.loss_of_taste_or_smell{
+    display: flex;
+    flex-direction: row;
+}
+
+.loss_of_taste_or_smell_text{
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.learn_more{
+    display: flex;
+    align-items: center;
+    padding: 3px 28px;
+    background-color: white;
+    /*background: url('../assets/images/SVG/symp%20arrow.svg') right no-repeat;*/
+    border: 1px solid #0E63DC;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.learn_more:hover{
+    background-color: aliceblue;
+}
+
+.learn_more_text{
+    font-family: "Circular Std";
+    font-weight: 700;
+    font-size: 16px;
+    color: #0E63DC;
+    margin-right: 20px;
+}
+
+.contact_doctor{
+    max-width: 700px;
+    display: flex;
+    max-height: 841px;
+}
+
+.doctor_image{
+    position: absolute;
+    left: 630px;
+    top: 183px;
+}
+
+.contact_doctor_button_container{
+    align-self: flex-end;
+    margin-left: 163px;
+}
+
+.contact_doctor_button{
+    width: 339px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: relative;
+    align-self: flex-end;
+    /*box-shadow: inset 0px 4px 20px rgba(255, 255, 255, 0.3);*/
+    /*backdrop-filter: blur(4px);*/
+}
+
+.contact_doctor_button_back{
+    position: absolute;
+    /*opacity: 2%;*/
+    /*filter: blur(50px);*/
+}
+
+.contact_doctor_button_image{
+    margin-left: 24px;
+}
+
+.contact_doctor_text{
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.notice{
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+
+    margin-bottom: 4px;
+}
+
+.contact_doctor_asap{
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #2E2E2E;
+    margin-top: 4px;
+}
+
+.contact_doctor_button:hover{
+    background-color: aliceblue;
+    border-color: aliceblue;
+}
+
+/*symptoms section end*/
+
+/*doctors section start*/
+
+.doctors{
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    position: relative;
+}
+
+.doctors_bg_decal{
+    position: absolute;
+    left: 3px;
+    top: 637px;
+}
+
+.left_doctor{
+    margin-left: 21px;
+    display: flex;
+    max-width: 652px;
+    max-height: 465px;
+    margin-top: 108px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.doctor_information_block_back{
+    align-self: flex-end;
+    position: absolute;
+    width: 523px;
+    height: 293px;
+    left: 125px;
+    top: 151px;
+
+    background: #3F89F3;
+    box-shadow: inset 0px 5px 20px rgba(255, 255, 255, 0.2), inset 4px 0px 30px rgba(14, 99, 220, 0.1);
+    border-radius: 20px;
+}
+
+.left_doctor_substract{
+    position: absolute;
+    z-index: 1;
+}
+
+.left_doctor_information_block{
+    color: white;
+    z-index: 2;
+    margin-left: 364px;
+    margin-top: 174px;
+}
+
+.doc_name{
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    margin: 0;
+}
+
+.spec_and_exp{
+    display: flex;
+    align-items: center;
+}
+
+.doc_spec{
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    margin-right: 8px;
+}
+
+.doc_exp{
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 8px;
+    opacity: 80%;
+}
+
+.doc_subtitle{
+    max-width: 241px;
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 70%;
+    margin-bottom: 28px;
+}
+
+.doc_contact_now_button{
+    display: flex;
+    width: 127px;
+    height: 36px;
+    padding: 8px 12px;
+    align-items: center;
+    background: #3F89F3;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+.contact_now_button_text{
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-right: 8px;
+    flex: none;
+}
+
+.doc_contact_now_button:hover{
+    background-color: cornflowerblue;
+}
+
+.doctors_right_coloumn{
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 183px;
+}
+
+.doctors_title_block{
+    display: flex;
+    flex-direction: column;
+    margin-left: 205px;
+
+}
+
+.doctors_title{
+    text-align: right;
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    color: #2E2E2E;
+    margin: 0;
+}
+
+.doctors_subtitle{
+    align-self: flex-end;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: right;
+    margin: 0;
+}
+
+.right_doctor{
+    display: flex;
+    max-width: 652px;
+    max-height: 465px;
+    position: relative;
+}
+
+.right_doctor_substract{
+    position: absolute;
+    top: 68px;
+    left: 39px;
+    z-index: 1;
+}
+
+.ctrl_arrows{
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+
+.right_arrow{
+    border-radius: 100%;
+    width: 63px;
+    height: 63px;
+    border: 0;
+    background-color: #0E63DC;
+    margin-left: 8px;
+    margin-right: 30px;
+}
+
+.right_arrow:hover{
+    background-color: darkblue;
+}
+
+.left_arrow{
+    border-radius: 100%;
+    width: 63px;
+    height: 63px;
+    border: 0;
+    background-color: #D6D6D6;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.right_doctor_information_block{
+    color: white;
+    z-index: 2;
+    margin-left: 254px;
+    margin-top: 21px;
+}
+
+/*doctors section end*/
